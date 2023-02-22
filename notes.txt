@@ -5,6 +5,42 @@ npx create-nx-workspace --preset=apps
 2. add angular support:
 npm install -D @nrwl/angular
 
-3. added mfe host
+3. add mfe host
 nx g @nrwl/angular:host home --directory=mfe --style=scss --skipTests=true --unitTestRunner none --e2eTestRunner none --skipFormat
 
+4. add sample app
+nx g @nrwl/angular:app sample --style=scss --skipTests=true --unitTestRunner none --e2eTestRunner none
+
+5. add mfe remote 
+nx g @nrwl/angular:remote kitchen --directory=mfe --host=mfe-home --style=scss --skipTests=true --unitTestRunner none --e2eTestRunner none --skipFormat  
+
+dryRun:
+
+UPDATE apps/sample/project.json
+CREATE apps/mfe/kitchen/tsconfig.app.json
+CREATE apps/mfe/kitchen/src/favicon.ico
+CREATE apps/mfe/kitchen/src/index.html
+CREATE apps/mfe/kitchen/src/main.ts
+CREATE apps/mfe/kitchen/src/styles.scss
+CREATE apps/mfe/kitchen/src/assets/.gitkeep
+CREATE apps/mfe/kitchen/src/app/app.module.ts
+CREATE apps/mfe/kitchen/src/app/app.component.ts
+CREATE apps/mfe/kitchen/project.json
+CREATE apps/mfe/kitchen/src/app/app.routes.ts
+CREATE apps/mfe/kitchen/tsconfig.editor.json
+CREATE apps/mfe/kitchen/tsconfig.json
+CREATE apps/mfe/kitchen/.eslintrc.json
+UPDATE apps/mfe/home/module-federation.config.js
+CREATE apps/mfe/home/src/remotes.d.ts
+UPDATE apps/mfe/home/src/app/app.routes.ts
+UPDATE apps/mfe/home/src/app/app.component.html
+CREATE apps/mfe/kitchen/src/app/remote-entry/entry.component.ts
+CREATE apps/mfe/kitchen/src/app/remote-entry/entry.module.ts
+CREATE apps/mfe/kitchen/src/app/remote-entry/entry.routes.ts
+CREATE apps/mfe/kitchen/src/app/remote-entry/nx-welcome.component.ts
+CREATE apps/mfe/kitchen/module-federation.config.js
+CREATE apps/mfe/kitchen/webpack.config.js
+CREATE apps/mfe/kitchen/webpack.prod.config.js
+CREATE apps/mfe/kitchen/src/bootstrap.ts
+
+WHY: UPDATE apps/sample/project.json
