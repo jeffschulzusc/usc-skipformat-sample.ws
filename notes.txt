@@ -6,5 +6,5 @@ npx create-nx-workspace --preset=apps
 npm install -D @nrwl/angular
 
 3. added mfe host
-nx g @nrwl/angular:host home --directory=mfe --style=scss --skipTests=true --unitTestRunner none --e2eTestRunner none --skipFormat 
+nx g @nrwl/angular:host home --directory=mfe --style=scss --skipTests=true --unitTestRunner none --e2eTestRunner none --skipFormat
 
