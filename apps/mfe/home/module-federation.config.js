@@ -1,4 +1,4 @@
 module.exports = {
   name: 'mfe-home',
-  remotes: []
+  remotes: ['mfe-kitchen',]
 }

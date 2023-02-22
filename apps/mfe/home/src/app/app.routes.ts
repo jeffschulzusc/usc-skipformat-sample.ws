@@ -3,6 +3,10 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 
 export const appRoutes: Route[] = [
     {
+    path: 'mfe-kitchen',
+    loadChildren: () => import('mfe-kitchen/Module').then(m => m.RemoteEntryModule)
+    },
+    {
       path: '',
       component: NxWelcomeComponent
-    },]
+    },

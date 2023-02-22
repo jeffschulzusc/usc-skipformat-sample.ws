@@ -7,16 +7,25 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/sample",
         "index": "apps/sample/src/index.html",
         "main": "apps/sample/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/sample/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/sample/src/favicon.ico", "apps/sample/src/assets"],
-        "styles": ["apps/sample/src/styles.scss"],
+        "assets": [
+          "apps/sample/src/favicon.ico",
+          "apps/sample/src/assets"
+        ],
+        "styles": [
+          "apps/sample/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -66,9 +75,14 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/sample/**/*.ts", "apps/sample/**/*.html"]
+        "lintFilePatterns": [
+          "apps/sample/**/*.ts",
+          "apps/sample/**/*.html"
+        ]
       }
     }
   },
